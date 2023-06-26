@@ -28,3 +28,47 @@ int[] remember = NewArray(size);
 PrintArr(remember);
 
 
+
+// Задача 25: Напишите цикл, который принимает на вход два числа (A и B) и возводит число A в натуральную степень B.
+// 3, 5 -> 243 (3⁵)
+// 2, 4 -> 16
+
+int Stepen (int num_A, int num_B)
+{
+    int sum = 1;
+    for (int count = 1; count <= num_B; count++)
+    {
+        sum *= num_A;   
+    } 
+    return sum;
+}
+Console.WriteLine("input first number");
+int first_num = Convert.ToInt32(Console.ReadLine());
+Console.WriteLine("input second number");
+int second_num = Convert.ToInt32(Console.ReadLine());
+int sum1 = Stepen(first_num, second_num);
+Console.WriteLine(sum1);
+
+
+
+// Задача 27: Напишите программу, которая принимает на вход число и выдаёт сумму цифр в числе.
+// 452 -> 11
+// 82 -> 10
+// 9012 -> 12
+
+
+int Sum(int num)
+{
+    
+    int result = 0;
+    while(num > 0)
+    {    
+        result = result + num % 10;
+        num = num / 10;
+    }
+    return result;   
+}
+Console.WriteLine("Input number");
+int number = Convert.ToInt32(Console.ReadLine());
+int sum = Sum(number);
+Console.WriteLine(sum);
